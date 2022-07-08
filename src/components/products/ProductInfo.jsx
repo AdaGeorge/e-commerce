@@ -21,7 +21,6 @@ const ProductInfo = ({product}) => {
       id: product.id,
       quantity: counter
     }
-    console.log(getConfig())
 
     axios.post(URL, addproduct, getConfig())
       .then(res => {

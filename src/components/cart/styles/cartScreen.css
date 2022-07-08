@@ -1,3 +1,14 @@
 .cart-screen{
+    text-align: center;
+    display: grid;
     color: white;
+    margin: 2em;
+    border: 1px red solid;
+    padding: 2em;
+    justify-content: center;
+}
+.product-cart{
+    display: flex;
+    gap: 1em;
+    padding: 2em;
 }

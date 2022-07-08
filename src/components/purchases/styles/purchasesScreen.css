@@ -1,3 +1,18 @@
 .purchases {
     color: aliceblue;
+    text-align: center;
+    margin: 2em;
 }
+.purchases__title{
+    margin-bottom: 2em;
+}
+.purchases__container{
+    max-height: 400px;
+    overflow: auto;
+}
+.purchase-product{
+    display: flex;
+    margin: 10px;
+    gap: 10px;
+}
+
