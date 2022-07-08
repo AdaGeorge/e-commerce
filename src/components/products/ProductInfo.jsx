@@ -16,7 +16,6 @@ const ProductInfo = ({product}) => {
 
   const plusOne = () => setCounter(counter + 1)
 
-  console.log(product)
 
   return (
     <article className='product-info'>
