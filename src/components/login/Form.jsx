@@ -49,10 +49,10 @@ const Form = () => {
       </div>
       <ul className="login__test">
         <li>
-          <span>Email:</span>mason@gmial.com
+          <span>Email:</span>adag@gmail.com
         </li>
         <li>
-          <span>Password:</span>mason1234
+          <span>Password:</span>ada1234
         </li>
       </ul>
 

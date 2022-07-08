@@ -2,6 +2,10 @@ import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import './styles/productCard.css'
 import { FaShoppingCart } from 'react-icons/fa'
+import { useDispatch } from 'react-redux'
+import axios from 'axios'
+import getConfig from '../../utils/getConfig'
+import { getAllProductsCart } from '../../store/slices/cart.slice'
 
 
 const ProductCard = ({product}) => {
@@ -9,6 +13,25 @@ const ProductCard = ({product}) => {
   const navigate = useNavigate()
 
   const goToProductId = () => navigate(`/product/${product.id}`)
+
+  const dispatch = useDispatch()
+
+  const addCartProduct = e => {
+    e.stopPropagation()
+    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+  
+    const objProduct = {
+      id: product.id,
+      quantity: 1
+    }
+  
+    axios.post(URL, objProduct, getConfig() )
+      .then(res => {
+        console.log(res.data)
+        dispatch(getAllProductsCart(res.data))
+      })
+      .catch(err => console.log(err.data))
+  }
 
   return (
     <article onClick={goToProductId} className='card-product'>
@@ -30,7 +53,7 @@ const ProductCard = ({product}) => {
           <h3 className='card-product__price-label'>Price</h3>
           <p className='card-product__price-number'>$ {product.price}</p>
         </div>
-        <button className='card-product__btn'>
+        <button onClick={addCartProduct} className='card-product__btn'>
         <i><FaShoppingCart/></i>
         </button>
       </div>

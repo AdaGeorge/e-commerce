@@ -21,10 +21,11 @@
     cursor: pointer;
 }
 .product-info-btn {
-    width: 100%;
+    width: 80%;
     padding: 1.2em;
     background-color: var(--secondary-color);
     border: none;
+    border-radius: 20px;
     cursor: pointer;
     box-shadow: 0 5px 100px, 0 0 2px, 0 0 1em #4451ff, 0 0 0.5em #4451ff, 0 0 1em #4451ff, 0 10px 3px #000;
 }
