@@ -1,0 +1,8 @@
+.products-container {
+    padding: var(--padding-mobile);
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 2.5em auto;
+}

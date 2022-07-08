@@ -1,0 +1,166 @@
+/*--animacion y fondo--*/
+
+html,body{
+  height:100%
+}
+body {
+  background: rgb(1, 6, 18) url(//images.weserv.nl/?url=i.imgur.com/6QJjYMe.jpg)  center no-repeat;
+  background-size:cover;
+  margin:0;
+}
+.login {
+  text-align: center;
+  width: 65%;
+  height: 250px;
+  margin: auto;
+  position: absolute;
+  top: -18em;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  user-select: none;
+}
+
+.login b{
+    font: 400 12vh "Vibur";
+    color: #fee;
+    text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+.login b span{
+  animation: blink linear infinite 2s;
+}
+.login b span:nth-of-type(2){
+  animation: blink linear infinite 3s;
+}
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+    box-shadow: inherit;
+  }
+  79%{
+     color: #333;
+     box-shadow: none;
+  }
+  80% {
+    box-shadow: none;
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+    box-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+    box-shadow: none;
+    
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+    box-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+    box-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
+}
+
+
+
+/*---input---*/
+
+.login__test {
+  color: rgba(255, 255, 255, 0.645);
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.login__test span{
+  margin-right: 10px;
+}
+
+.form {
+    background-color: rgba(5, 5, 5, 0.186);
+    width: min(80%, 300px);
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 90px rgb(247, 110, 110);
+    animation: blink linear infinite 2s;
+}
+
+.form input{
+    background-color: transparent;
+    border-radius: 20px;
+    border: none;
+    height: 40px;
+    padding-left: 1em;
+    color: white;
+}
+
+.form-icon{
+  color: #ff4444;
+  margin: 1em auto;
+  font-size: 1.5em;
+}
+
+.form-btn{
+  background-color: #ff4444;
+  border: none;
+  height: 40px;
+  width: max-content;
+  margin: 2em auto;
+  border-radius: 50%;
+}
+
+.form-btn:hover {
+  background-color: #fdfcfc;
+  border: none;
+  height: 40px;
+  width: max-content;
+  margin: 2em auto;
+  border-radius: 50%;
+}
+
+@media (min-width: 450px) {
+
+  .form {
+    background-color: rgba(5, 5, 5, 0.186);
+    width: min(80%, 300px);
+    position: absolute;
+    bottom: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: grid;
+    justify-content: center;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 90px rgb(247, 110, 110);
+    animation: blink linear infinite 2s;
+}
+.login b{
+  font: 400 19vh "Vibur";
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+}
+
+.error{
+  color: #ff4444;
+}

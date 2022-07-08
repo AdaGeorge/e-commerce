@@ -1,0 +1,37 @@
+.form-home{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 70px 0;
+}
+.input-home{
+    width: 50%;
+    padding: 10px;
+    color: rgb(250, 250, 250);
+    background-color: transparent;
+    border: 1px #4451ff solid;
+    border-radius: 20px;
+    box-shadow: 0 5px 100px, 0 0 2px, 0 0 1em #4451ff, 0 0 0.5em #4451ff, 0 0 1em #4451ff, 0 10px 3px #000;
+}
+.btn-input-home{
+    width: 4em;
+    height: 4em;
+    margin-left: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4451ff;
+    color: white;
+    box-shadow: 0 5px 100px, 0 0 2px, 0 0 1em #4451ff, 0 0 0.5em #4451ff, 0 0 1em #4451ff, 0 10px 3px #000;
+    cursor: pointer;
+}
+.btn-input-home:hover{
+    width: 4em;
+    height: 4em;
+    margin-left: 15px;
+    border-radius: 50%;
+    border: none;
+    background-color: #4451ff;
+    cursor: pointer;
+    color: #000;
+
+}
