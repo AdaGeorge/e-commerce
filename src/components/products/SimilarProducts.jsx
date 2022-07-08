@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
-import ProductCard from '../Home/ProductCard'
+import ProductCard from '../home/ProductCard'
 import './styles/similarProducts.css'
 
 const SimilarProducts = ({product}) => {
