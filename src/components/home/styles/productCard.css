@@ -68,11 +68,12 @@
   font-weight: 700;
 }
 .card-product__btn {
+  font-size: 1em;
   position: absolute;
   right: 20px;
   bottom: 30px;
-  width: 4em;
-  height: 4em;
+  width: 2.7em;
+  height: 2.8em;
   border-radius: 50%;
   border: none;
   background-color: #4451ff;

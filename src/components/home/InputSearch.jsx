@@ -3,13 +3,13 @@ import { useForm } from "react-hook-form";
 import { FaSearch } from 'react-icons/fa'
 import './styles/inputSearch.css'
 
-const InputSearch = () => {
-  const [inputSearchValue, setInputSearchValue] = useState();
+const InputSearch = ({setInputSearchValue}) => {
+  
   const { handleSubmit, register, reset } = useForm();
 
   const submit = (data) => {
-    setInputSearchValue(data);
-    reset('')
+    setInputSearchValue(data.searchText);
+    reset({searchText: ''})
   };
 
   return (

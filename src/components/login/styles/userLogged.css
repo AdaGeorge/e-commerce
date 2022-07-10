@@ -55,3 +55,26 @@
     text-shadow: inherit;
   }
 }
+
+.btns{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  position: absolute;
+  bottom: 7em;
+  gap: 20px;
+}
+.btn-user-logged{
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: var(--secondary-color);
+  box-shadow: 0 5px 100px, 0 0 2px, 0 0 1em var(--secondary-color), 0 0 0.5em var(--secondary-color),
+    0 0 1em var(--secondary-color), 0 10px 3px #000;
+    cursor: pointer;
+}
+
+.btn-user-logged:hover{
+  box-shadow: none;
+}

@@ -22,12 +22,14 @@ const UserLogged = () => {
           Use<span>r</span> <span>lo</span>gged
         </b>
       </div>
+      <div className="btns">
       <button
       onClick={logOut}
-      className="btn-log-out">Log out</button>
+      className="btn-user-logged">Log out</button>
       <button 
       onClick={goHome}
-      className="btn-go-home" >Go home</button>
+      className="btn-user-logged" >Go home</button>
+      </div>
     </div>
   );
 };
