@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getAllProducts } from '../../store/slices/products.slice'
+import { useSelector } from 'react-redux'
 import FooterScreen from '../shared/FooterScreen'
 import HeaderScreen from '../shared/HeaderScreen'
 import InputSearch from './InputSearch'
@@ -13,11 +12,11 @@ const HomeScreen = () => {
   const [inputSearchValue, setInputSearchValue] = useState();
   const [filteredProducts, setFilteredProducts] = useState([])
   const products = useSelector(state => state.products)
-  
+  console.log(products)
   useEffect(()=>{
     if (inputSearchValue){
       const filterP = products.filter(product => {
-        product.title.includes(inputSearchValue.toLowerCase())
+        product.title.toLowerCase().includes(inputSearchValue.toLowerCase())
       })
       setFilteredProducts(filterP)
     }

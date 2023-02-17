@@ -12,9 +12,9 @@ export const productSlice = createSlice({
 export const { setProductsGlobal } = productSlice.actions;
 
 export const getAllProducts = () => (dispatch) =>{
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/products'
+    const URL = 'https://fakestoreapi.com/products'
     return axios.get(URL)
-       .then(res=> dispatch(setProductsGlobal(res.data.data.products)))
+       .then(res=> dispatch(setProductsGlobal(res.data)))
        .catch(err=> console.log(err))
 }
 
