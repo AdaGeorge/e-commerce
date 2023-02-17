@@ -18,13 +18,15 @@ const Form = () => {
   const navigate = useNavigate()
 
   const submit = (data) => {
+    console.log(data)
     const URL__LOGIN_POST =
-      "https://ecommerce-api-react.herokuapp.com/api/v1/users/login";
+      "https://fakestoreapi.com/auth/login";
 
     axios
       .post(URL__LOGIN_POST, data)
       .then((res) => {
-        localStorage.setItem("token", res.data.data.token);
+        console.log(res)
+        localStorage.setItem("token", res.data.token);
         navigate('/')
       })
       .catch((err) => {
@@ -49,16 +51,16 @@ const Form = () => {
       </div>
       <ul className="login__test">
         <li>
-          <span>Email:</span>adag@gmail.com
+          <span>Username:</span>kate_h
         </li>
         <li>
-          <span>Password:</span>ada1234
+          <span>Password:</span>kfejk@*_
         </li>
       </ul>
 
       <form className="form" onSubmit={handleSubmit(submit)}>
         <FaUserCircle className="form-icon" />
-        <input type="email" placeholder="email" {...register("email")} />
+        <input type="text" placeholder="username" {...register("username")} />
         <input
           type="password"
           placeholder="password"

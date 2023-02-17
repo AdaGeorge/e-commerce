@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Form from "./Form";
+import FormLogin from "./Form";
 import UserLogged from "./UserLogged";
 
 
@@ -18,7 +18,7 @@ const Login = () => {
       token?
       <UserLogged/>
       :
-      <Form />
+      <FormLogin />
     }
     </div>
     

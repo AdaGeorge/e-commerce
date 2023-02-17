@@ -37,15 +37,10 @@ const ProductCard = ({product}) => {
     <article onClick={goToProductId} className='card-product'>
       <header className='card-product__header'>
         <img 
-          className='card-product__img-back' 
+          className='card-product__img' 
           src={product.image} 
           alt="" 
         />
-        {/* <img 
-          className='card-product__img' 
-          src={product.image[0]} 
-          alt="" 
-        /> */}
       </header>
       <div className='card-product__body'>
         <h2 className='card-product__title'>{product.title}</h2>
