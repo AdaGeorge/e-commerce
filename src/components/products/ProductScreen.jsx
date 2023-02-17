@@ -5,7 +5,6 @@ import ProductInfo from "./ProductInfo";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import SimilarProducts from "./SimilarProducts";
-import Slider from "./Slider";
 import './styles/productScreen.css'
 
 
@@ -14,12 +13,12 @@ const ProductScreen = () => {
   const [product, setProduct] = useState();
 
   const { id } = useParams();
-
+  
   useEffect(() => {
-    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/products/${id}`;
+    const URL = `https://fakestoreapi.com/products/${id}`;
     axios
       .get(URL)
-      .then((res) => setProduct(res.data.data.product))
+      .then((res) => setProduct(res.data))
       .catch((err) => console.log(err));
   }, [id]);
 
@@ -31,8 +30,13 @@ const ProductScreen = () => {
 
       <div >
         <div className="product">
-          
-          <Slider product={product}/>  
+
+          {
+            product &&
+            <div className="slider">
+              <img key={product.image} src={product.image} alt="" className="slider__imgs" />
+            </div>
+           }
           <ProductInfo product={product} />
         </div>
         <hr />

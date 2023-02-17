@@ -11,7 +11,7 @@ const SimilarProducts = ({product}) => {
 
   useEffect(() => {
     if(allProducts.length !== 0){
-      const filter = allProducts.filter(e => e.category.name === product?.category)
+      const filter = allProducts.filter(e => e.category === product?.category)
       setFilterProducts(filter)
     }
   }, [product])
@@ -24,8 +24,9 @@ const SimilarProducts = ({product}) => {
         </b></h2>
       <div className='products-container'>
         {
+          product &&
           filterProducts?.map(e => {
-            if(e.title !== product.title){
+            if(e.title !== product?.title){
               return (
               <ProductCard 
                 key={e.id}
