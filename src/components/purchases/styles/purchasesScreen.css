@@ -6,6 +6,11 @@
 .purchases__title{
     margin-bottom: 2em;
 }
+.purchase_err{
+    color:red;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
 .purchases__container{
     max-height: 400px;
     overflow: auto;

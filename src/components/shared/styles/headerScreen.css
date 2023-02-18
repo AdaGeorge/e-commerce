@@ -71,7 +71,7 @@ header {
 
 .header__menuham {
   color: rgb(249, 72, 59);
-  box-shadow: 0px 0px 25px rgb(255, 0, 0);
+  filter: drop-shadow(4px 4px 5px rgb(255, 0, 0));
   border-radius: 50%;
   font-size: 1.4rem;
   position: relative;
@@ -97,7 +97,7 @@ header {
 }
 .icon-navbar{
     color: rgb(249, 72, 59);
-    box-shadow: 0px 0px 25px rgb(255, 0, 0);
+    filter: drop-shadow(4px 4px 12px rgb(255, 0, 0));
     border-radius: 50%;
 }
 .navbar__list {

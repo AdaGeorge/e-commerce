@@ -38,12 +38,13 @@
 }
 .card-product__title {
   font-size: 1.1rem;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   height: 42px;
+  overflow: hidden;
 }
 .card-product__title:hover {
   font-size: 1.2rem;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
   height: 42px;
   cursor: pointer;
 }

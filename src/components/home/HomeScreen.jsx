@@ -12,18 +12,17 @@ const HomeScreen = () => {
   const [inputSearchValue, setInputSearchValue] = useState();
   const [filteredProducts, setFilteredProducts] = useState([])
   const products = useSelector(state => state.products)
-  console.log(products)
   useEffect(()=>{
-    if (inputSearchValue){
-      const filterP = products.filter(product => {
-        product.title.toLowerCase().includes(inputSearchValue.toLowerCase())
+    if (inputSearchValue && products){
+      const filtered = []
+      products.map(product => {
+        if(product.title.toLowerCase().includes(inputSearchValue.toLowerCase())){
+          filtered.push(product)
+        }
       })
-      setFilteredProducts(filterP)
+      setFilteredProducts(filtered)
     }
   },[inputSearchValue])
-  
-  
-console.log(inputSearchValue)
 
   return (
     <div>
@@ -33,6 +32,15 @@ console.log(inputSearchValue)
      
      <div className='products-container'>
         {
+          filteredProducts[0] 
+          ?
+          filteredProducts?.map(product => (
+            <ProductCard 
+              key={product.id}
+              product={product}
+            />
+          )) 
+          :
           products?.map(product => (
             <ProductCard 
               key={product.id}

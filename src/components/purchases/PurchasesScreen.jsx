@@ -31,7 +31,7 @@ const PurchasesScreen = () => {
               key={purchase.id}
               purchase={purchase}
             />
-          ))
+          )) || <h5 className='purchase_err'>No purchases to show</h5>
         }
       </div>
     </div>
