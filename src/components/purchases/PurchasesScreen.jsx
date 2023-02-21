@@ -11,9 +11,9 @@ const PurchasesScreen = () => {
   const [purchases, setPurchases] = useState()
 
   useEffect(() => {
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/purchases'
+    const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/purchases'
     axios.get(URL, getConfig())
-      .then(res => setPurchases(res.data.data.purchases))
+      .then(res => setPurchases(res.data))
       .catch(err => console.log(err))
   }, [])
 

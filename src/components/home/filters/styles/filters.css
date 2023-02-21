@@ -1,0 +1,114 @@
+/*---------- Input Search ---------- */
+
+.form-home {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 70px 0;
+}
+.input-home {
+  width: 50%;
+  padding: 10px;
+  color: rgb(250, 250, 250);
+  background-color: transparent;
+  border: 1px #4451ff solid;
+  border-radius: 20px;
+  box-shadow: 0 5px 100px, 0 0 2px, 0 0 1em #4451ff, 0 0 0.5em #4451ff,
+    0 0 1em #4451ff, 0 10px 3px #000;
+}
+.btn-input-home {
+  width: 4em;
+  height: 4em;
+  margin-left: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4451ff;
+  color: white;
+  box-shadow: 0 5px 100px, 0 0 2px, 0 0 1em #4451ff, 0 0 0.5em #4451ff,
+    0 0 1em #4451ff, 0 10px 3px #000;
+  cursor: pointer;
+}
+.btn-input-home:hover {
+  width: 4em;
+  height: 4em;
+  margin-left: 15px;
+  border-radius: 50%;
+  border: none;
+  background-color: #4451ff;
+  cursor: pointer;
+  color: #000;
+}
+
+/* -------- Categories Select ---------*/
+
+.select_container{
+	max-width: 250px;
+	position: relative;
+}
+
+.select_category {
+  background: transparent;
+  border: 1px solid #4451ff;
+  border-radius: 10px;
+  color: white;
+  font-size: 14px;
+  outline: none;
+  height: 40px;
+  padding: 10px;
+  padding-right: 2rem;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select_container i{
+	position: absolute;
+	right: 10px;
+	top: calc(50% - 8px);
+	width: 10px;
+	height: 10px;
+	display: block;
+	border-left:2px solid #4451ff;
+	border-bottom:2px solid #4451ff;
+	transform: rotate(-45deg);
+	transition: all 0.25s ease;
+    z-index: -10;
+}
+
+/* -------- Range Price --------- */
+
+.rangecontainer{
+    text-align: center;
+}
+
+.max_price_range{
+    margin-bottom: 5px;
+}
+
+.slider_range {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background: white;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  cursor: pointer;
+}
+
+.slider_range:hover {
+  opacity: 1;
+}
+
+.slider_range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%; 
+    background: #4451ff;
+    cursor: pointer;
+  }

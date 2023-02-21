@@ -15,7 +15,7 @@ const ProductInfo = ({product}) => {
 
   const addToCart = () => {
 
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+    const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
 
     const addproduct = {
       id: product.id,

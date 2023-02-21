@@ -6,6 +6,7 @@ import { useParams } from "react-router-dom";
 import axios from "axios";
 import SimilarProducts from "./SimilarProducts";
 import './styles/productScreen.css'
+import Slider from "./Slider";
 
 
 
@@ -15,7 +16,7 @@ const ProductScreen = () => {
   const { id } = useParams();
   
   useEffect(() => {
-    const URL = `https://fakestoreapi.com/products/${id}`;
+    const URL = `https://e-commerce-api-v2.academlo.tech/api/v1/products/${id}`;
     axios
       .get(URL)
       .then((res) => setProduct(res.data))
@@ -30,13 +31,7 @@ const ProductScreen = () => {
 
       <div >
         <div className="product">
-
-          {
-            product &&
-            <div className="slider">
-              <img key={product.image} src={product.image} alt="" className="slider__imgs" />
-            </div>
-           }
+          <Slider product={product}/>
           <ProductInfo product={product} />
         </div>
         <hr />

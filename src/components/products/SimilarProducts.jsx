@@ -11,7 +11,9 @@ const SimilarProducts = ({product}) => {
 
   useEffect(() => {
     if(allProducts.length !== 0){
-      const filter = allProducts.filter(e => e.category === product?.category)
+      console.log(allProducts)
+      const filter = allProducts.filter(e => e.category.name === product?.category.name)
+      console.log(filter)
       setFilterProducts(filter)
     }
   }, [product])

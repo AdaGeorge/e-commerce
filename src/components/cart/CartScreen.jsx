@@ -15,7 +15,7 @@ const CartScreen = () => {
 
   const postPurchase = () => {
 
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/purchases'
+    const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/purchases'
 
     const objPurchase = {
       street: "Green St. 1456",
@@ -39,8 +39,7 @@ const CartScreen = () => {
   if(cart) {
 
     const cb = (acc, cv) => {
-      console.log(cv)
-      return acc + (cv.price * cv.productsInCart.quantity)
+      return acc + (Number(cv.product?.price) * cv.quantity)
     }
 
     totalPriceCart = cart.reduce(cb, 0)

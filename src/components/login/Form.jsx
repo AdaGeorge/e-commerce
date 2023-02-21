@@ -20,7 +20,7 @@ const Form = () => {
   const submit = (data) => {
     console.log(data)
     const URL__LOGIN_POST =
-      "https://fakestoreapi.com/auth/login";
+      "https://e-commerce-api-v2.academlo.tech/api/v1/users/login";
 
     axios
       .post(URL__LOGIN_POST, data)
@@ -51,16 +51,16 @@ const Form = () => {
       </div>
       <ul className="login__test">
         <li>
-          <span>Username:</span>kate_h
+          <span>email:</span>adag@gmail.com
         </li>
         <li>
-          <span>Password:</span>kfejk@*_
+          <span>Password:</span>ada1234
         </li>
       </ul>
 
       <form className="form" onSubmit={handleSubmit(submit)}>
         <FaUserCircle className="form-icon" />
-        <input type="text" placeholder="username" {...register("username")} />
+        <input type="email" placeholder="email" {...register("email")} />
         <input
           type="password"
           placeholder="password"

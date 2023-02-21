@@ -1,15 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { FaSearch } from 'react-icons/fa'
-import './styles/inputSearch.css'
+import './styles/filters.css'
 
-const InputSearch = ({setInputSearchValue}) => {
+const InputSearch = ({inputSearchValue, setInputSearchValue}) => {
   
+  //react hook form functions
   const { handleSubmit, register, reset } = useForm();
 
+  // Setting search state function and cleaning input
   const submit = (data) => {
-    setInputSearchValue(data.searchText);
-    reset({searchText: ''})
+    setInputSearchValue({
+      ...inputSearchValue,
+      title: data.searchText
+    });
   };
 
   return (

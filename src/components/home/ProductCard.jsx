@@ -18,11 +18,11 @@ const ProductCard = ({product}) => {
 
   const addCartProduct = e => {
     e.stopPropagation()
-    const URL = 'https://ecommerce-api-react.herokuapp.com/api/v1/cart'
+    const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
   
     const objProduct = {
-      id: product.id,
-      quantity: 1
+      quantity: 1,
+      productId: product.id
     }
   
     axios.post(URL, objProduct, getConfig() )
@@ -36,9 +36,14 @@ const ProductCard = ({product}) => {
   return (
     <article onClick={goToProductId} className='card-product'>
       <header className='card-product__header'>
+      <img 
+          className='card-product__img-back' 
+          src={product?.images[1]?.url} 
+          alt="" 
+        />
         <img 
           className='card-product__img' 
-          src={product.image} 
+          src={product?.images[0]?.url} 
           alt="" 
         />
       </header>

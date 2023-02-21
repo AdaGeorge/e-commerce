@@ -5,6 +5,7 @@ import ProductPurchase from './ProductPurchase'
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 const PurchasesCard = ({purchase}) => {
+  console.log(purchase)
   
   const dateData = new Date(purchase.updatedAt)
 
@@ -15,12 +16,12 @@ const PurchasesCard = ({purchase}) => {
     <article className='puchase-card'>
       <h3>{datePurchase}</h3>
       {
-        purchase.cart.products.map(product => (
+        purchase &&
           <ProductPurchase 
-            key={product.id}
-            product={product}
+            key={purchase.id}
+            product={purchase}
           />
-        ))
+        
       }
     </article>
   )

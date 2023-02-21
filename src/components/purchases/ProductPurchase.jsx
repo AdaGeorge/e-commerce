@@ -2,12 +2,11 @@ import React from 'react'
 
 const ProductsPurchase = ({product}) => {
 
-
   return (
     <section className='purchase-product'>
-      <h4>{product.title}</h4>
-      <p>{product.productsInCart.quantity}</p>
-      <p>$ {product.price}</p>
+      <h4>{product?.product?.title}</h4>
+      <p>{product?.quantity}</p>
+      <p>$ {product?.product?.price}</p>
     </section>
   )
 }

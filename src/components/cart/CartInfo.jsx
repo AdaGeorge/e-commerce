@@ -4,13 +4,14 @@ import { useDispatch } from 'react-redux'
 import { getAllProductsCart } from '../../store/slices/cart.slice'
 import getConfig from '../../utils/getConfig'
 import { FaTrashAlt } from 'react-icons/fa'
+import './styles/cartScreen.css'
 
 const CartInfo = ({productCart}) => {
   
   const dispatch = useDispatch()
 
   const deleteProductFromCart = () => {
-    const URL = `https://ecommerce-api-react.herokuapp.com/api/v1/cart/${productCart.id}`
+    const URL = `https://e-commerce-api-v2.academlo.tech/api/v1/cart/${productCart.id}`
 
     axios.delete(URL, getConfig())
       .then(res => {
@@ -22,10 +23,10 @@ const CartInfo = ({productCart}) => {
 
   return (
     <section className='product-cart'>
-      <h4>{productCart.brand}</h4>
-      <h3>{productCart.title}</h3>
-      <p>{productCart.productsInCart.quantity}</p>
-      <p>{productCart.price}</p>
+      <h4>{productCart?.product?.brand}</h4>
+      <h3>{productCart?.product?.title}</h3>
+      <p>{productCart.quantity}</p>
+      <p>{productCart?.product?.price}</p>
       <div onClick={deleteProductFromCart} className='cart-info__btn'>
         <FaTrashAlt/>
       </div>

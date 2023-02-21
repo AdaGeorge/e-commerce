@@ -9,8 +9,27 @@ import './App.css'
 import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 import { getAllProducts } from './store/slices/products.slice'
+import axios from 'axios'
 
 function App() {
+
+//     useEffect(()=>{
+//      const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/users'
+
+//      const newUser = {
+//        firstName: "Ada",
+//        lastName: "George",
+//        email: "adag@gmail.com",
+//        password: "ada1234",
+//        phone: "1234567891"
+//      }
+
+//      axios.post(URL, newUser)
+//        .then((res) => console.log(res.data))
+//        .catch(err => console.log(err.data))
+
+
+//  },[])
 
   const dispatch = useDispatch()
 

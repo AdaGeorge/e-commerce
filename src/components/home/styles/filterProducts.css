@@ -1,0 +1,29 @@
+.title_filter{
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.filter_box {
+  width: min(100%, 600px);
+  color: white;
+  border-radius: 10px;
+  border: 1px solid #4451ff;
+  box-shadow: 0 0 1em #4451ff;
+  margin: 0 auto;
+}
+
+.filter_box > div{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px auto;
+  }
+
+@media (max-width: 600px) {
+  .filter_box > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+}
