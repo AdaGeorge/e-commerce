@@ -1,7 +1,8 @@
 .title_filter{
-  color: white;
+  color: red;
   font-size: 2rem;
   text-align: center;
+  padding: 2rem;
 }
 
 .filter_box {

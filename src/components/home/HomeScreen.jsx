@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import FooterScreen from "../shared/FooterScreen";
 import HeaderScreen from "../shared/HeaderScreen";
+import Loader from "../shared/Loader";
 import FilterProducts from "./FilterProducts";
 import ProductCard from "./ProductCard";
 import "./styles/homeScreen.css";
@@ -18,7 +19,10 @@ const HomeScreen = () => {
       products={products}
       />
 
-      <div className="products-container">
+     {
+        !products && !filteredProducts ?
+        <Loader/> :
+     <div className="products-container">
         {filteredProducts[0]
           ? filteredProducts?.map((product) => (
               <ProductCard key={product.id} product={product} />
@@ -27,6 +31,7 @@ const HomeScreen = () => {
               <ProductCard key={product.id} product={product} />
             ))}
       </div>
+      }
 
       <FooterScreen />
     </div>

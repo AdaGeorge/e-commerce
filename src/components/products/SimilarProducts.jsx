@@ -1,20 +1,22 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import ProductCard from '../home/ProductCard'
+import Loader from '../shared/Loader'
 import './styles/similarProducts.css'
 
 const SimilarProducts = ({product}) => {
 
   const [filterProducts, setFilterProducts] = useState()
+  const [isLoading, setIsLoading] = useState(false)
 
   const allProducts = useSelector(state => state.products)
 
   useEffect(() => {
+    setIsLoading(true)
     if(allProducts.length !== 0){
-      console.log(allProducts)
       const filter = allProducts.filter(e => e.category.name === product?.category.name)
-      console.log(filter)
       setFilterProducts(filter)
+      setIsLoading(false)
     }
   }, [product])
 
@@ -24,7 +26,10 @@ const SimilarProducts = ({product}) => {
           Disco<span>ver S</span>
           <span>imilar </span>items
         </b></h2>
-      <div className='products-container'>
+     {
+      isLoading ? 
+      <Loader/> :
+     <div className='products-container'>
         {
           product &&
           filterProducts?.map(e => {
@@ -38,6 +43,7 @@ const SimilarProducts = ({product}) => {
           })
         }
       </div>
+      }
     </article>
   )
 }

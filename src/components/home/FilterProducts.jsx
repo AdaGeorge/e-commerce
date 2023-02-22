@@ -26,9 +26,13 @@ const FilterProducts = ({ setFilteredProducts, products }) => {
               }
             );
             if (filterByPrice[0]) {
+              setBadRequest(false)
               return setFilteredProducts(filterByPrice);
+            }else{
+              setBadRequest(true)
             }
           } else {
+            setBadRequest(false)
             setFilteredProducts(res.data);
           }
         })
@@ -40,7 +44,10 @@ const FilterProducts = ({ setFilteredProducts, products }) => {
        })
        if(filterByPrice[0]){
          setFilteredProducts(filterByPrice)
-       }
+         setBadRequest(false)
+       }else {
+        setBadRequest(true)
+      }
      }
   }, [inputSearchValue]);
 
