@@ -5,8 +5,6 @@ import ProductPurchase from './ProductPurchase'
 const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
 const PurchasesCard = ({purchase}) => {
-  console.log(purchase)
-  
   const dateData = new Date(purchase.updatedAt)
 
   const datePurchase = `${months[dateData.getMonth()]} ${dateData.getDate()}, ${dateData.getFullYear()}`
@@ -14,7 +12,7 @@ const PurchasesCard = ({purchase}) => {
 
   return (
     <article className='puchase-card'>
-      <h3>{datePurchase}</h3>
+      <h3 className='puchase-date'>{datePurchase}</h3>
       {
         purchase &&
           <ProductPurchase 
