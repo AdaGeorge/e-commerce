@@ -18,8 +18,8 @@ const ProductInfo = ({product}) => {
     const URL = 'https://e-commerce-api-v2.academlo.tech/api/v1/cart'
 
     const addproduct = {
-      id: product.id,
-      quantity: counter
+      quantity: counter,
+      productId: product.id
     }
 
     axios.post(URL, addproduct, getConfig())

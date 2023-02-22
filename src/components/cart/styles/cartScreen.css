@@ -1,119 +1,128 @@
-.cart-screen{
-    text-align: center;
-    display: grid;
-    color: white;
-    margin: 2em;
-    padding: 2em;
-    justify-content: center;
-    min-height: 400px;
+/*--------- general container --------*/
+.cart-screen {
+  text-align: center;
+  display: grid;
+  color: white;
+  margin: 2em;
+  padding: 2em;
+  justify-content: center;
+  min-height: 400px;
 }
 
+
+/*--------- Title My cart --------*/
 .cart-screen-title {
-    text-align: center;
-    width: 65%;
-    height: 150px;
-    margin: 0 auto;
-    user-select: none;
-  }
-  
-  .cart-screen-title b{
-      font: 400 9vh "Vibur";
-      color: #fee;
-      text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444, 0 0 0.1em #ff4444, 0 10px 3px #000;
-  }
-  .cart-screen-title b span{
-    animation: blink linear infinite 1.5s;
-  }
+  text-align: center;
+  width: 65%;
+  height: 150px;
+  margin: 0 auto;
+  user-select: none;
+}
 
-  @keyframes blink {
-    78% {
-      color: inherit;
-      text-shadow: inherit;
-      box-shadow: inherit;
-    }
-    79%{
-       color: #333;
-       box-shadow: none;
-    }
-    80% {
-      box-shadow: none;
-      text-shadow: none;
-    }
-    81% {
-      color: inherit;
-      text-shadow: inherit;
-      box-shadow: inherit;
-    }
-    82% {
-      color: #333;
-      text-shadow: none;
-      box-shadow: none;
-      
-    }
-    83% {
-      color: inherit;
-      text-shadow: inherit;
-      box-shadow: inherit;
-    }
-    92% {
-      color: #333;
-      text-shadow: none;
-      box-shadow: none;
-    }
-    92.5% {
-      color: inherit;
-      text-shadow: inherit;
-    }
-  }
-.product-cart{
-    width: min(100%, 800px);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-around;
-    gap: 1em;
-    padding: 2em;
-    color: #989898;
-    border: 1px solid #4451ff;
-    box-shadow: 0 5px 40px, 0 0 2px, 0 0 1em #4451ff, 0 0 0.5em #4451ff,
+.cart-screen-title b {
+  font: 400 9vh "Vibur";
+  color: #fee;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff4444, 0 0 0.5em #ff4444,
+    0 0 0.1em #ff4444, 0 10px 3px #000;
+}
+.cart-screen-title b span {
+  animation: blink linear infinite 1.5s;
+}
+
+/*-------- Container Products ---------*/
+.cart-info-container {
+  margin-top: 6em;
+  display: grid;
+  gap: 40px;
+}
+/*------ Product in cart ------*/
+.product-cart {
+  width: min(100%, 800px);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  gap: 1em;
+  padding: 2em;
+  color: #989898;
+  border: 1px solid #4451ff;
+  box-shadow: 0 5px 40px, 0 0 2px, 0 0 1em #4451ff, 0 0 0.5em #4451ff,
     0 0 1em #4451ff, 0 10px 3px #000;
-    border-radius: 20px;
+  border-radius: 20px;
 }
-.cart-info-container{
-    margin-top: 6em;
-    display: grid;
-    gap: 40px;
-}
-.cart-info__btn{
+/*-------- Btn Delete Product ---------*/
+.cart-info__btn {
   color: var(--third-color);
   font-size: 1.2rem;
   cursor: pointer;
 }
-.cart__total{
+/*-------- Total ---------*/
+.cart__total {
   margin: 3em;
 }
-.cart__empty{
+/*-------- If Empty ---------*/
+.cart__empty {
   font-size: 2em;
   margin: 2em;
 }
-.btn-cart{
-   padding: 10px;
-   border-radius: 20px;
-   color: #fcfafa;
-   border: 1px solid var(--third-color);
-   background-color: var(--third-color);
-   box-shadow: 0 5px 50px, 0 0 2px, 0 0 1em var(--third-color), 0 0 0.5em var(--third-color),
-   0 0 1em var(--third-color), 0 10px 3px #000;
-   border-radius: 20px;
-   margin-top: 4em;
-   cursor: pointer;
-
+/*-------- Btn Purchases ---------*/
+.btn-cart {
+  padding: 10px;
+  border-radius: 20px;
+  color: #fcfafa;
+  border: 1px solid var(--third-color);
+  background-color: var(--third-color);
+  box-shadow: 0 5px 50px, 0 0 2px, 0 0 1em var(--third-color),
+    0 0 0.5em var(--third-color), 0 0 1em var(--third-color), 0 10px 3px #000;
+  border-radius: 20px;
+  margin-top: 4em;
+  cursor: pointer;
 }
-.btn-cart:hover{
+.btn-cart:hover {
+  box-shadow: none;
+}
+
+@keyframes blink {
+  78% {
+    color: inherit;
+    text-shadow: inherit;
+    box-shadow: inherit;
+  }
+  79% {
+    color: #333;
     box-shadow: none;
+  }
+  80% {
+    box-shadow: none;
+    text-shadow: none;
+  }
+  81% {
+    color: inherit;
+    text-shadow: inherit;
+    box-shadow: inherit;
+  }
+  82% {
+    color: #333;
+    text-shadow: none;
+    box-shadow: none;
+  }
+  83% {
+    color: inherit;
+    text-shadow: inherit;
+    box-shadow: inherit;
+  }
+  92% {
+    color: #333;
+    text-shadow: none;
+    box-shadow: none;
+  }
+  92.5% {
+    color: inherit;
+    text-shadow: inherit;
+  }
 }
 
-@media (min-width: 500px){
-  .cart-screen-title b{
+@media (min-width: 500px) {
+  .cart-screen-title b {
     font: 400 12vh "Vibur";
-}
+  }
 }
