@@ -51,7 +51,7 @@ const Form = () => {
       </div>
       <ul className="login__test">
         <li>
-          <span>email:</span>adag@gmail.com
+          <span>email:</span>ada@gmail.com
         </li>
         <li>
           <span>Password:</span>ada1234

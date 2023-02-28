@@ -6,3 +6,11 @@
     gap: 20px;
     margin: 2.5em;
 }
+@media (max-width: 550px) {
+    .products-container {
+        margin: 0;
+        padding: 0;
+        padding-top: var(--padding-mobile);
+        padding-bottom: var(--padding-mobile);
+    }
+}

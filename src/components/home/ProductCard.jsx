@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import './styles/productCard.css'
 import { FaShoppingCart } from 'react-icons/fa'
@@ -6,9 +6,12 @@ import { useDispatch } from 'react-redux'
 import axios from 'axios'
 import getConfig from '../../utils/getConfig'
 import { getAllProductsCart } from '../../store/slices/cart.slice'
+import Alert from '../shared/Alert'
 
 
 const ProductCard = ({product}) => {
+
+  const [isOpenAlert, setIsOpenAlert] = useState(false)
 
   const navigate = useNavigate()
 
@@ -29,12 +32,14 @@ const ProductCard = ({product}) => {
       .then(res => {
         console.log(res.data)
         dispatch(getAllProductsCart())
+        setIsOpenAlert(true)
       })
       .catch(err => console.log(err.data))
   }
 
   return (
     <article onClick={goToProductId} className='card-product'>
+      {/* <Alert setIsOpenAlert={setIsOpenAlert} isOpenAlert={isOpenAlert} content={'Product added to cart'}/> */}
       <header className='card-product__header'>
       <img 
           className='card-product__img-back' 

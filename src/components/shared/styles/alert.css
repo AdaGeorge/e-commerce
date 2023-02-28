@@ -1,0 +1,16 @@
+.open_alert {
+    position: fixed;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 70%;
+    border: 1px solid #4451ff;
+    box-shadow: 0 0 5px 0 #4451ff;
+}
+
+.not_open_alert{
+    display: none;
+}
